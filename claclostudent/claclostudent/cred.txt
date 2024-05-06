@@ -1,0 +1,10 @@
+Student/Admin
+
+username: claclostudent
+email: student@claclo.edu
+password:  claclostudent
+
+
+Student
+username : claclostudent1
+Password : Claclo_12345

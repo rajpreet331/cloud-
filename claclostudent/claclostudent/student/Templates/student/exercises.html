@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Exercises</h2>
+      <ul class="list-group">
+        {% for exercise in exercises %}
+        <li class="list-group-item">
+          <h4>{{ exercise.title }}</h4>
+          <p>{{ exercise.description }}</p>
+          <p>Subject: {{ exercise.subject }}</p>
+          <p>Due Date: {{ exercise.due_date }}</p>
+          <a href="{% url 'submit_assignment' exercise.id %}" class="btn btn-primary">Submit Assignment</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+{% endblock %}

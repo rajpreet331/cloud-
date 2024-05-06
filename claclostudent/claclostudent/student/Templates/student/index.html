@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3 shadow">
+      <div class="list-group ">
+        <a href="{% url 'index' %}" class="list-group-item list-group-item-action bg-secondary text-light">Home</a>
+        <a href="{% url 'profile' %}" class="list-group-item list-group-item-action bg-secondary text-light">Profile</a>
+        <a href="{% url 'enroll_course' %}" class="list-group-item list-group-item-action bg-secondary text-light">Enroll Course</a>
+        <a href="{% url 'learning_resources' %}" class="list-group-item list-group-item-action bg-secondary text-light">Learning Resources</a>
+        <a href="{% url 'exercises' %}" class="list-group-item list-group-item-action bg-secondary text-light">Exercises</a>
+        {% comment %} <a href="{% url 'submit_assignment' %}" class="list-group-item list-group-item-action bg-secondary text-light">Submit Assignments</a> {% endcomment %}
+        <a href="{% url 'grades' %}" class="list-group-item list-group-item-action bg-secondary text-light">Grades</a>
+      </div>  
+    </div>
+    <div class="col-md-9">
+      <h1>Welcome to ClaClo-Student</h1>
+      <p>This is the main content area.</p>
+    </div>
+  </div>
+</div>
+{% endblock %}

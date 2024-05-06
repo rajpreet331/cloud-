@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Grades</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Assignment</th>
+            <th>Exercise</th>
+            <th>Score</th>
+            <th>Comments</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for grade in grades %}
+          <tr>
+            <td>{{ grade.assignment.student.user.username }} - {{ grade.assignment.submitted_at }}</td>
+            <td>{{ grade.assignment.exercise.title }}</td>
+            <td>{{ grade.score }}</td>
+            <td>{{ grade.comments }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}

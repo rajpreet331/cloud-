@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Learning Resources</h2>
+      <ul class="list-group">
+        {% for resource in resources %}
+        <li class="list-group-item">
+          <h4>{{ resource.title }}</h4>
+          <p>{{ resource.content }}</p>
+          {% if resource.file %}
+          <a href="{{ resource.file.url }}" download>Download File</a>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+{% endblock %}
